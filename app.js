@@ -106,20 +106,20 @@ window.addEventListener('load', (event) => {
         switch (direction) {
             case 'U':
                 bottom = Y;
-                Y = Math.ceil((Y+top)/2);
+                Y = Math.floor((Y+top)/2);
             break;
             case 'D':
                 top = Y;
-                Y += Math.ceil((bottom-Y)/2);
+                Y += Math.floor((bottom-Y)/2);
                 break;
             case 'L':
                 right = X;
-                X = Math.ceil((X+left) / 2);
+                X = Math.floor((X+left) / 2);
 
                 break;
             case 'R':
                 left = X;
-                X += Math.ceil((right - X) / 2);
+                X += Math.floor((right - X) / 2);
                 break;
         }
     }
